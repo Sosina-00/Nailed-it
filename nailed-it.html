@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nailed It Studio | Wilanów Luxe</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<style>
+  :root {
+    --champagne: #FDFBF7;
+    --rose-gold: #E7C5C5;
+    --gold-accent: #D4AF37;
+    --warm-sand: #E3D5CA;
+  }
+  body{font-family:'Inter',sans-serif;background:var(--champagne);color:#2D2926; scroll-behavior: smooth;}
+  h1,h2,h3{font-family:'Playfair Display',serif; color:#4A4440;}
+  .fade{opacity:0;transform:translateY(30px);transition:1s}
+  .fade.show{opacity:1;transform:none}
+  .gallery-img{height:360px;width:100%;object-fit:cover;border-radius:24px;transition:.5s; border: 1px solid rgba(231, 197, 197, 0.3);}
+  .gallery-img:hover{transform:scale(1.04); border-color: var(--rose-gold);}
+  .lang{display:none}
+  .lang.active{display:block}
+  nav { background: rgba(253, 251, 247, 0.85); backdrop-filter: blur(12px); }
+  .slide { transition: opacity 1s ease-in-out; }
+  
+  .btn-rose-gold {
+    background: linear-gradient(135deg, #E7C5C5 0%, #D4AF37 100%);
+    box-shadow: 0 10px 20px -5px rgba(231, 197, 197, 0.5);
+  }
+  .text-gold { color: #B5935B; }
+  .border-rose { border-color: #E7C5C5; }
+</style>
+</head>
+
+<body>
+
+<div class="fixed top-6 right-6 z-[60] bg-white/80 backdrop-blur rounded-full shadow-lg px-4 py-2 text-xs border border-[#E7C5C5]/30">
+  <button onclick="setLang('en')" class="mr-2 font-bold hover:text-[#B5935B]">EN</button>|
+  <button onclick="setLang('pl')" class="ml-2 font-bold hover:text-[#B5935B]">PL</button>
+</div>
+
+<nav class="fixed top-0 w-full z-50 px-6 md:px-10 py-5 flex justify-between items-center border-b border-[#E7C5C5]/20">
+  <div class="flex items-center gap-3">
+    <img src="https://d375139ucebi94.cloudfront.net/region2/pl/212357/logo/9b3beeac1bfd43178c295a842f8956-nailed-it-studio-logo-46ca64f2875d4fa4a559fb750dfbc0-booksy.jpeg?size=150x150" class="w-9 h-9 rounded-full ring-2 ring-[#E7C5C5]/50">
+    <span class="font-bold tracking-widest uppercase text-[10px] text-stone-600">Nailed It Studio</span>
+  </div>
+  
+  <div class="hidden md:flex gap-10 text-[10px] uppercase tracking-[0.3em] font-semibold">
+    <a href="#work" class="hover:text-[#B5935B] transition">
+        <span class="lang en active">Portfolio</span>
+        <span class="lang pl">Portfolio</span>
+    </a>
+    <a href="#about-reviews" class="hover:text-[#B5935B] transition">
+        <span class="lang en active">About</span>
+        <span class="lang pl">O Nas</span>
+    </a>
+    <a href="#reviews" class="hover:text-[#B5935B] transition">
+        <span class="lang en active">Reviews</span>
+        <span class="lang pl">Opinie</span>
+    </a>
+  </div>
+
+  <a href="https://booksy.com/pl-pl/212357_nailed-it-studio_paznokcie_3_warszawa" target="_blank" class="text-[10px] font-bold border-b-2 border-[#D4AF37] pb-1 hover:text-[#B5935B] transition uppercase tracking-widest">
+    <span class="lang en active">Book Vizit</span>
+    <span class="lang pl">Umów Wizytę</span>
+  </a>
+</nav>
+
+<header class="relative h-[90vh] flex items-center justify-center overflow-hidden">
+  <img src="https://d375139ucebi94.cloudfront.net/region2/pl/212357/inspiration/f38aaeb7eea14b508238d44ec8a9e9-nailed-it-studio-inspiration-251f21f26d234ee7859c444349192f-booksy.jpeg"
+       class="absolute inset-0 w-full h-full object-cover scale-105">
+  <div class="absolute inset-0 bg-white/40 backdrop-blur-[2px]"></div>
+
+  <div class="relative z-10 text-center fade pt-20 px-4">
+    <h1 class="text-6xl md:text-8xl mb-6 tracking-tighter text-[#4A4440]">
+      <span class="lang en active">Pure Elegance</span>
+      <span class="lang pl">Czysta Elegancja</span>
+    </h1>
+    <p class="uppercase tracking-[0.5em] text-[10px] mb-12 text-stone-500 font-light">Boutique Nail House • Wilanów</p>
+    <a href="https://booksy.com/pl-pl/212357_nailed-it-studio_paznokcie_3_warszawa"
+       target="_blank"
+       class="btn-rose-gold text-white px-16 py-5 rounded-full text-[10px] tracking-[0.3em] font-bold hover:scale-105 transition-transform inline-block">
+      <span class="lang en active">RESERVE NOW</span>
+      <span class="lang pl">REZERWUJ TERAZ</span>
+    </a>
+  </div>
+</header>
+
+<section id="work" class="py-32 max-w-7xl mx-auto px-6">
+  <div class="flex flex-col items-center mb-20">
+    <div class="h-[1px] w-20 bg-[#D4AF37] mb-6"></div>
+    <h2 class="text-5xl text-center">
+        <span class="lang en active">The Gallery</span>
+        <span class="lang pl">Galeria Prac</span>
+    </h2>
+  </div>
+  
+  <div class="grid md:grid-cols-3 gap-10">
+    <img class="gallery-img fade shadow-sm" src="https://d375139ucebi94.cloudfront.net/region2/pl/212357/inspiration/c99bba7a6d2940d1aad52256423ebd-nailed-it-studio-inspiration-530f2eb21e9e4591ada62796615b56-booksy.jpeg">
+    <img class="gallery-img fade shadow-sm" src="https://d375139ucebi94.cloudfront.net/region2/pl/212357/inspiration/512b0abb1ebc4cedb397aff9be9d5a-nailed-it-studio-inspiration-42332d97e80a4a918547c2ca2a749e-booksy.jpeg">
+    <img class="gallery-img fade shadow-sm" src="https://d375139ucebi94.cloudfront.net/region2/pl/212357/inspiration/68a06deaf7fe40a795bb1e551450e7-nailed-it-studio-inspiration-2548887892e442d3a987fdae2ad6f6-booksy.jpeg">
+    <img class="gallery-img fade shadow-sm" src="https://d375139ucebi94.cloudfront.net/region2/pl/212357/inspiration/2d564f17505e40d98da77ec38d9226-nailed-it-studio-inspiration-b35dac358f9d44cba34cd907b8d678-booksy.jpeg">
+    <img class="gallery-img fade shadow-sm" src="https://d375139ucebi94.cloudfront.net/region2/pl/212357/inspiration/812250bb406c4ce08513590382baad-nailed-it-studio-inspiration-1c711dd68d1443baadea79ed26d002-booksy.jpeg">
+    <img class="gallery-img fade shadow-sm" src="https://d375139ucebi94.cloudfront.net/region2/pl/212357/inspiration/2a0f380ba7d24a7d8c850160ff6a91-nailed-it-studio-inspiration-52beab31272f49e294810d8c2cd8b6-booksy.jpeg">
+  </div>
+</section>
+
+<section id="about-reviews" class="py-32 bg-[#F8F3F0] border-y border-[#E7C5C5]/20">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-24 items-start relative z-10">
+
+    <div class="fade">
+      <p class="text-[10px] uppercase tracking-[0.5em] text-[#D4AF37] font-bold mb-4">Mestiza Luxury</p>
+      <h2 class="text-6xl mb-12 tracking-tighter">
+        <span class="lang en active">Our Story</span>
+        <span class="lang pl">Nasza Pasja</span>
+      </h2>
+
+      <div class="border-l-4 border-[#E7C5C5] pl-8 mb-16">
+        <p class="text-xl text-stone-600 leading-relaxed font-light italic">
+          <span class="lang en active">"At Nailed It, we transform manicures into a ritual of self-care. Experience boutique comfort in the heart of Wilanów."</span>
+          <span class="lang pl">„W Nailed It zmieniamy manicure w rytuał dbałości o siebie. Doświadcz butikowego komfortu w samym sercu Wilanowa.”</span>
+        </p>
+      </div>
+
+      <div class="grid grid-cols-3 gap-8 text-center mb-20">
+        <div>
+          <img class="w-24 h-24 mx-auto rounded-full object-cover ring-4 ring-white shadow-md mb-4" src="https://d375139ucebi94.cloudfront.net/region2/pl/212357/resource_photos/75dc7e224ebd48639a6ca48fcec34137.jpeg?size=250x250">
+          <p class="text-[10px] font-bold uppercase tracking-widest text-stone-400">Michael</p>
+        </div>
+        <div>
+          <img class="w-24 h-24 mx-auto rounded-full object-cover ring-4 ring-white shadow-md mb-4" src="https://d375139ucebi94.cloudfront.net/region2/pl/212357/resource_photos/35b04b81b74a4f7dbd0c283ffea35159.jpeg?size=250x250">
+          <p class="text-[10px] font-bold uppercase tracking-widest text-stone-400">Zuza</p>
+        </div>
+        <div>
+          <img class="w-24 h-24 mx-auto rounded-full object-cover ring-4 ring-white shadow-md mb-4" src="https://d375139ucebi94.cloudfront.net/region2/pl/212357/resource_photos/7aa2f29d65d04255804fafa60701723b.jpeg?size=250x250">
+          <p class="text-[10px] font-bold uppercase tracking-widest text-stone-400">Helena</p>
+        </div>
+      </div>
+
+      <div class="p-10 bg-white rounded-3xl shadow-xl shadow-[#E7C5C5]/10 border border-[#E7C5C5]/10">
+        <div class="flex items-center gap-4 mb-8">
+            <i data-lucide="clock" class="text-[#D4AF37] w-5 h-5"></i>
+            <h3 class="text-[10px] uppercase tracking-[0.4em] font-bold">Studio Hours</h3>
+        </div>
+        <div class="space-y-4 text-xs tracking-[0.2em] text-stone-500">
+          <div class="flex justify-between border-b border-stone-50 pb-2">
+            <span>MON — THU</span> <span>09:00 – 20:00</span>
+          </div>
+          <div class="flex justify-between border-b border-stone-50 pb-2 text-[#B5935B] font-bold">
+            <span>FRIDAY</span> <span>09:00 – 20:00</span>
+          </div>
+          <div class="flex justify-between">
+            <span>SAT — SUN</span> <span>09:30 – 19:30</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="reviews" class="fade md:pt-40 relative">
+      <div class="relative bg-white/60 backdrop-blur-md p-14 rounded-[3rem] border border-white shadow-2xl min-h-[400px] flex flex-col justify-center">
+        <div class="absolute -top-6 -right-6 bg-white p-6 rounded-full shadow-lg border border-[#E7C5C5]/20">
+            <i data-lucide="heart" class="text-[#E7C5C5] fill-[#E7C5C5] w-8 h-8"></i>
+        </div>
+        
+        <div id="carousel" class="relative h-56">
+          <div class="slide opacity-100 absolute inset-0 z-10">
+            <div class="flex gap-1 mb-6 text-[#D4AF37]">
+                <i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i>
+            </div>
+            <p class="text-2xl text-stone-700 leading-snug font-light italic mb-8">
+              <span class="lang en active">"The precision is unmatched. The studio feels like a private spa experience."</span>
+              <span class="lang pl">„Precyzja jest nie do podrobienia. W studio można poczuć się jak w prywatnym spa.”</span>
+            </p>
+            <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#D4AF37]">Sarah Jenkins</p>
+          </div>
+
+          <div class="slide opacity-0 absolute inset-0">
+            <div class="flex gap-1 mb-6 text-[#D4AF37]">
+                <i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i>
+            </div>
+            <p class="text-2xl text-stone-700 leading-snug font-light italic mb-8">
+              <span class="lang en active">"Finally a place that understands aesthetics and extreme hygiene. Love it!"</span>
+              <span class="lang pl">„W końcu miejsce, które rozumie estetykę i ekstremalną higienę. Uwielbiam!”</span>
+            </p>
+            <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#D4AF37]">Anna Maria</p>
+          </div>
+        </div>
+
+        <div class="absolute bottom-12 flex gap-4">
+            <div class="dot w-12 h-[2px] bg-[#E7C5C5] transition-all"></div>
+            <div class="dot w-12 h-[2px] bg-stone-200 transition-all"></div>
+        </div>
+      </div>
+
+      <div class="mt-16 flex items-center justify-between px-8">
+          <p class="text-[10px] text-stone-400 uppercase tracking-widest">Read 200+ Verified Reviews</p>
+          <a href="https://booksy.com" target="_blank" class="p-4 rounded-full border border-[#E7C5C5] hover:bg-[#E7C5C5] transition group">
+              <i data-lucide="external-link" class="w-4 h-4 text-[#E7C5C5] group-hover:text-white transition"></i>
+          </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-32 text-center bg-white relative">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="text-3xl mb-4 italic font-light">Follow our Journey</h2>
+    <p class="text-[10px] tracking-[0.4em] uppercase text-stone-400 mb-16">@naileditstudio_wilanow</p>
+    <iframe src="https://www.instagram.com/naileditstudio_wilanow/embed"
+            width="100%" height="550" frameborder="0" class="rounded-[2.5rem] shadow-2xl border border-stone-100"></iframe>
+  </div>
+</section>
+
+<footer class="bg-[#2D2926] text-[#E3D5CA] pt-32 pb-12 px-6 relative overflow-hidden">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-24 relative z-10">
+    <div>
+      <h3 class="text-4xl mb-12 text-white">Visit Us</h3>
+      <div class="space-y-6 text-sm tracking-widest font-light opacity-80">
+        <p>Aleja Rzeczypospolitej 24/u 11<br>02-972 Warszawa</p>
+        <p class="text-2xl text-white font-normal mt-10 tracking-normal">739 432 970</p>
+      </div>
+      
+      <div class="flex gap-8 mt-16">
+        <a href="#" class="hover:text-white transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+        <a href="#" class="hover:text-white transition"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+      </div>
+    </div>
+
+    <div class="h-96 rounded-[2.5rem] overflow-hidden border border-white/10 grayscale opacity-60 hover:grayscale-0 transition duration-1000">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2446.852234038446!2d21.0664!3d52.1648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTLCsDA5JzUzLjMiTiAyMcKwMDMnNTkuMCJF!5e0!3m2!1sen!2spl!4v1634567890123!5m2!1sen!2spl"
+              width="100%" height="100%" loading="lazy" style="border:0;"></iframe>
+    </div>
+  </div>
+
+  <div class="text-center text-[8px] tracking-[0.8em] uppercase opacity-30 mt-32 border-t border-white/5 pt-12">
+    Nailed It Studio Luxe • 2026 • Wilanów
+  </div>
+</footer>
+
+<script>
+lucide.createIcons();
+
+/* Animation triggers */
+const obs = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('show')), {threshold: 0.1});
+document.querySelectorAll('.fade').forEach(el => obs.observe(el));
+
+/* Language logic */
+function setLang(l){
+  document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.'+l).forEach(el => el.classList.add('active'));
+}
+
+/* Carousel logic */
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.style.opacity = i === index ? '1' : '0';
+    slide.style.zIndex = i === index ? '20' : '0';
+    dots[i].classList.toggle('bg-[#E7C5C5]', i === index);
+    dots[i].classList.toggle('bg-stone-200', i !== index);
+  });
+}
+
+setInterval(() => {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}, 5000);
+</script>
+
+</body>
+</html>
